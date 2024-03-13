@@ -3,6 +3,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Authorization;
 using WebApi.Models;
+using WebApi.Entities;
 using WebApi.Services;
 
 [ApiController]
@@ -29,10 +30,5 @@ public class UsersController : ControllerBase
         return Ok(response);
     }
 
-    [HttpGet]
-    public IActionResult GetAll()
-    {
-        var users = _userService.GetAll();
-        return Ok(users);
-    }
+
 }

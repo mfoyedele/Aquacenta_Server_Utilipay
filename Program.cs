@@ -14,7 +14,7 @@ var builder = WebApplication.CreateBuilder(args);
     services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
     // configure DI for application services
-    services.AddScoped<IJwtUtils, JwtUtils>();
+    // services.AddScoped<IJwtUtils, JwtUtils>();
     services.AddScoped<IUserService, UserService>();
 }
 
@@ -29,7 +29,7 @@ var app = builder.Build();
         .AllowAnyHeader());
 
     // custom jwt auth middleware
-    app.UseMiddleware<JwtMiddleware>();
+    // app.UseMiddleware<JwtMiddleware>();
 
     app.MapControllers();
 }

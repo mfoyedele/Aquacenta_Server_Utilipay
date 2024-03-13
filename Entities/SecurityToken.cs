@@ -2,7 +2,7 @@ namespace WebApi.Entities;
 
 using System.Text.Json.Serialization;
 
-public class User
+public class SecurityToken
 {
     public int Id { get; set; }
     

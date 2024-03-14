@@ -39,7 +39,7 @@ namespace SecurityTokenController.Controllers
                 {
                     // Read the response content
                     string token = await response.Content.ReadAsStringAsync();
-                    return Ok(token); // Return the token
+                    return Ok(token); // Return the bearer token
                 }
                 else
                 {
